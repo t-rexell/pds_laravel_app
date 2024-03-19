@@ -62,7 +62,7 @@
 								@enderror
 							</div>
 						</div>
-						<div class="col-md-4">
+						{{-- <div class="col-md-4">
 							<div class="form-group mb-3">
 								<label for="role">User Role
 									<x-asterisks />
@@ -76,8 +76,8 @@
 									<x-input-error message="{{ $message }}" />
 								@enderror
 							</div>
-						</div>
-						<div class="col-md-4">
+						</div> --}}
+						{{-- <div class="col-md-4">
 							<div class="form-group mb-3">
 								<label for="status">User Status
 									<x-asterisks />
@@ -91,7 +91,7 @@
 									<x-input-error message="{{ $message }}" />
 								@enderror
 							</div>
-						</div>
+						</div> --}}
 					</div>
 
 					<div class="row">

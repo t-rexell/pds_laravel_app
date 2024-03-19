@@ -78,7 +78,7 @@
 
 	{{-- datepicker --}}
 	<script src="{{ asset('vendor/vanillajs-datepicker/datepicker.min.js') }}"></script>
-	
+
   {{-- bootstrap-select--}}
   <script type="text/javascript" src="{{ asset('vendor/bootstrap-select/bootstrap-select.min.js') }}"></script>
 
