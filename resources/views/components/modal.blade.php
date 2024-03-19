@@ -19,7 +19,7 @@
 						<button id="{{ $buttonId }}" class="btn btn-outline-danger"><i class="bi bi-check-lg"></i> Delete </button>
           </div>
         @endif
-
+{{-- 
         @if ($type === 'view')
           <div class="modal-header">
             <h5 class="modal-title">Cancel Reason</h5>
@@ -164,7 +164,7 @@
 						<button id="close-button" data-bs-dismiss="modal" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i> Close </button>
 						<button id="{{ $buttonId }}" class="btn btn-outline-tertiary"><i class="bi bi-check-lg"></i> Deactivate </button>
           </div>
-        @endif
+        @endif --}}
 
       </div>
     </div>

@@ -84,30 +84,37 @@ class UserController extends Controller
     public function update(UpdateUserRequest $request, User $user)
     {
         // validated data
-		$data = $request->validated();
+        $data = $request->validated();
 
-		// Update User
-		$user->first_name 		= $data['first_name'];
-		$user->middle_name 		= $data['middle_name'];
-		$user->last_name 			= $data['last_name'];
-		$user->email 					= $data['email'];
+        // Update User
+        $user->first_name         = $data['first_name'];
+        $user->middle_name         = $data['middle_name'];
+        $user->last_name             = $data['last_name'];
+        $user->email                     = $data['email'];
 
-		// optional password updating
-		if ( isset($data['password']) ) {
-			$user->password	= $data['password'];
-		}
+        // optional password updating
+        if (isset($data['password'])) {
+            $user->password    = $data['password'];
+        }
 
-		$user->save();
+        $user->save();
 
-		// redirection
-		return redirect()->route('users.index');
+        // redirection
+        return redirect()->route('users.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request, User $user)
     {
-        //
+        if ( $request->ajax() ) {
+
+			$user->delete();
+			return response()->json([
+				'success' => true
+			]);
+
+		}
     }
 }
