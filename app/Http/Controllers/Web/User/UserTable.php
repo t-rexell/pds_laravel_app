@@ -17,7 +17,7 @@ class UserTable extends Controller
     {
         if ($request->ajax()) {
 
-            $users = User::select('id', 'first_name','middle_name', 'last_name', 'email');
+            $users = User::select('id', 'first_name', 'middle_name', 'last_name', 'email')->where('id', '!=', auth()->user()->id);
 
             return DataTables::of($users)
                 ->addColumn('action', 'user.table-buttons')

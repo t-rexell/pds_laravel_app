@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\User\StoreUserRequest;
+use App\Http\Requests\User\UpdateUserRequest;
 use Illuminate\Http\RedirectResponse;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -41,25 +42,25 @@ class UserController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(StoreUserRequest $request)
-	{
+    {
 
-		// validated data
-		$data = $request->validated();
+        // validated data
+        $data = $request->validated();
 
-		// dd($data);
+        // dd($data);
 
-		// Insert new User
-		$user 								= new User;
-		$user->first_name 		            = $data['first_name'];
-		$user->middle_name 		            = $data['middle_name'];
-		$user->last_name 			        = $data['last_name'];
-		$user->email 					    = $data['email'];
-		$user->password 			        = $data['password'];
-		$user->save();
+        // Insert new User
+        $user                                 = new User;
+        $user->first_name                     = $data['first_name'];
+        $user->middle_name                     = $data['middle_name'];
+        $user->last_name                     = $data['last_name'];
+        $user->email                         = $data['email'];
+        $user->password                     = $data['password'];
+        $user->save();
 
-		// redirection
-		return redirect()->route('users.index');
-	}
+        // redirection
+        return redirect()->route('users.index');
+    }
 
     /**
      * Display the specified resource.
@@ -80,9 +81,26 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateUserRequest $request, User $user)
     {
-        return redirect()->route('users.index');
+        // validated data
+		$data = $request->validated();
+
+		// Update User
+		$user->first_name 		= $data['first_name'];
+		$user->middle_name 		= $data['middle_name'];
+		$user->last_name 			= $data['last_name'];
+		$user->email 					= $data['email'];
+
+		// optional password updating
+		if ( isset($data['password']) ) {
+			$user->password	= $data['password'];
+		}
+
+		$user->save();
+
+		// redirection
+		return redirect()->route('users.index');
     }
 
     /**
