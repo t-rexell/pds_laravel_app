@@ -17,16 +17,16 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request): View
+    public function index()
     {
 
-        // search input
-        $searchVal = $request->search ?? null;
-        // paginate with query
-        $users = User::all();
-        // $users = User::where('name', 'LIKE', '%'.$searchVal.'%')->whereNot('id', auth()->user()->id)->paginate(5)->withQueryString();
+        // // search input
+        // $searchVal = $request->search ?? null;
+        // // paginate with query
+        // $users = User::all();
+        // // $users = User::where('name', 'LIKE', '%'.$searchVal.'%')->whereNot('id', auth()->user()->id)->paginate(5)->withQueryString();
 
-        return view('user.index', compact('users', 'searchVal'));
+        return view('user.index');
     }
 
     /**
@@ -40,24 +40,26 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreUserRequest $request): RedirectResponse
-    {
-        // Retrieve the validated input...
-        $validated = $request->validated();
+    public function store(StoreUserRequest $request)
+	{
 
-        // store new User to database
-        $user                       = new User;
-        $user->first_name                 = $validated['first_name'];
-        $user->middle_name                 = $validated['middle_name'];
-        $user->last_name                 = $validated['last_name'];
-        $user->email                = $validated['email'];
-        $user->password             = Hash::make($validated['password']);
-        $user->save();
+		// validated data
+		$data = $request->validated();
 
-        // Alert::success('User Successfully Added', '');
-        // redirect to users page
-        return redirect()->route('users.index')->with('status', 'User has been successfully added.');
-    }
+		// dd($data);
+
+		// Insert new User
+		$user 								= new User;
+		$user->first_name 		            = $data['first_name'];
+		$user->middle_name 		            = $data['middle_name'];
+		$user->last_name 			        = $data['last_name'];
+		$user->email 					    = $data['email'];
+		$user->password 			        = $data['password'];
+		$user->save();
+
+		// redirection
+		return redirect()->route('users.index');
+	}
 
     /**
      * Display the specified resource.

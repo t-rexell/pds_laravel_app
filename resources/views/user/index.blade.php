@@ -36,50 +36,23 @@
     </div>
     <div class="card mb-5">
         <div class="card-body">
-            <div class="table-responsive">
-                <x-table id="user-table">
-                    <thead class="thead-light">
-                        <tr>
-                            <th class="rounded-start">First Name</th>
-                            <th>Middle Name</th>
-                            <th>Last Name</th>
-                            <th>Email</th>
-                            {{-- <th>Role</th>
-							<th>Status</th>
-							<th>Date Added</th> --}}
-                            <th class="rounded-end" width="10%">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @forelse ($users as $user)
-                            <tr>
-                                <td valign="middle">
-                                    <span class="fw-normal">{{ $user->first_name }}</span>
-                                </td> <td valign="middle">
-                                    <span class="fw-normal">{{ $user->middle_name }}</span>
-                                </td> <td valign="middle">
-                                    <span class="fw-normal">{{ $user->last_name }}</span>
-                                </td>
-                                <td valign="middle"><span class="fw-normal">{{ $user->email }}</span></td>
-
-                                <td valign="middle">
-                                    <a href="{{ route('users.edit', $user->id) }}"
-                                        class="btn btn-sm btn-pill btn-outline-tertiary">Show</a>
-                                </td>
-                            </tr>
-                        @empty
-                            <tr class="text-center">
-                                <td colspan="5">No data.</td>
-                            </tr>
-                        @endforelse
-                    </tbody>
-                </x-table>
-            </div>
+            <x-table id="userTable">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="rounded-start">First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th class="rounded-end">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </x-table>
         </div>
     </div>
 
     @push('scripts')
-        <script type="text/javascript" src="{{ asset('js/page/user/index.js') }}"></script>
-    @endpush
-
+		<script type="text/javascript" src="{{ asset('js/page/user/index.js') }}"></script>
+	@endpush
 </x-app-layout>

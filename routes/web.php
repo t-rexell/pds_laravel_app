@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Web\User\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web\User\UserTable;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,6 +18,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    Route::name('users.')->prefix('users')->group(function () {
+		Route::get('table', UserTable::class)->name('table');
+	});
 
 	Route::resource('users', UserController::class);
 

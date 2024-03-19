@@ -55,7 +55,7 @@
 								<label for="email">Email
 									<x-asterisks />
 								</label>
-								<input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email" value="{{ old('email') }}" required>
+								<input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email" value="{{ old('email') }}"  >
 								@error('email')
 									<x-input-error message="{{ $message }}" />
 								@enderror
