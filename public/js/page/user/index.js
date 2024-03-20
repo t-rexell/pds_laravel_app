@@ -57,16 +57,16 @@ $(function () {
         })
             .done(function (response) {
                 table.ajax.reload();
-                // toast.fire({
-                // 	icon: 'success',
-                // 	title: response.message,
-                // });
+                toast.fire({
+                    icon: "success",
+                    title: response.message,
+                });
             })
             .fail(function (jqXHR, textStatus, errorThrown) {
-                // toast.fire({
-                // 	icon: 'error',
-                // 	title: jqXHR.responseJSON.message,
-                // });
+                toast.fire({
+                    icon: "error",
+                    title: jqXHR.responseJSON.message,
+                });
             })
             .always(function (jqXHROrData, textStatus, jqXHROrErrorThrown) {
                 buttons("destroy-user", "finish");

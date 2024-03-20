@@ -19,11 +19,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::name('users.')->prefix('users')->group(function () {
-		Route::get('table', UserTable::class)->name('table');
-	});
+        Route::get('table', UserTable::class)->name('table');
+    });
 
-	Route::resource('users', UserController::class);
-
+    Route::resource('users', UserController::class);
+    Route::get('/form', function () {
+        return view('form');
+    })->name('forms');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
