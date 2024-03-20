@@ -60,7 +60,7 @@
                                                     class="form-control @error('first_name') is-invalid @enderror"
                                                     placeholder="First Name" value="{{ old('first_name') }}">
                                                 @error('first_name')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -71,7 +71,7 @@
                                                     class="form-control @error('middle_name') is-invalid @enderror"
                                                     placeholder="Middle Name" value="{{ old('middle_name') }}">
                                                 @error('middle_name')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -84,7 +84,7 @@
                                                     class="form-control @error('surname') is-invalid @enderror"
                                                     placeholder="Surname" value="{{ old('surname') }}">
                                                 @error('surname')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -97,7 +97,7 @@
                                                     class="form-control @error('name_extension') is-invalid @enderror"
                                                     placeholder="Name Extension" value="{{ old('name_extension') }}">
                                                 @error('name_extension')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -107,14 +107,14 @@
                                             <div class="form-group mb-3">
                                                 <label for="birthday">Date of Birth</label>
                                                 <div class="input-group"><span class="input-group-text"><svg
-                                                            class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20"
-                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            class="icon icon-xs" fill="currentColor"
+                                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                             <path fill-rule="evenodd"
                                                                 d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
                                                                 clip-rule="evenodd"></path>
                                                         </svg> </span><input data-datepicker=""
-                                                        class="form-control datepicker-input" id="birthday" type="text"
-                                                        placeholder="dd/mm/yyyy" required=""></div>
+                                                        class="form-control datepicker-input" id="birthday"
+                                                        type="text" placeholder="dd/mm/yyyy" required=""></div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -127,12 +127,13 @@
                                                     placeholder="Brgy/Municipality/Province"
                                                     value="{{ old('birth_place') }}">
                                                 @error('birth_place')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
                                         <div class="col-sm-2"><label for="sex">Sex</label> <select
-                                                class="form-select mb-0" id="sex" aria-label="sex select example">
+                                                class="form-select mb-0" id="sex"
+                                                aria-label="sex select example">
                                                 {{-- <option selected="selected">Sex</option> --}}
                                                 <option value="1">Male</option>
                                                 <option value="2">Female</option>
@@ -160,7 +161,7 @@
                                                         placeholder="Enter Other Option"
                                                         value="{{ old('otherCivilStatus') }}">
                                                     @error('otherCivilStatus')
-                                                    <x-input-error message="{{ $message }}" />
+                                                        <x-input-error message="{{ $message }}" />
                                                     @enderror
                                                 </div>
                                             </div>
@@ -174,7 +175,7 @@
                                                     class="form-control @error('height') is-invalid @enderror"
                                                     placeholder="Height (cm)" value="{{ old('height') }}">
                                                 @error('height')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -187,7 +188,7 @@
                                                     class="form-control @error('weight') is-invalid @enderror"
                                                     placeholder="Weight (kg)" value="{{ old('weight') }}">
                                                 @error('weight')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -213,7 +214,7 @@
                                                     class="form-control @error('gsis') is-invalid @enderror"
                                                     placeholder="GSIS ID No." value="{{ old('gsis') }}">
                                                 @error('gsis')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -226,7 +227,7 @@
                                                     class="form-control @error('pagibig') is-invalid @enderror"
                                                     placeholder="PAGIBIG ID No." value="{{ old('pagibig') }}">
                                                 @error('height')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -239,7 +240,7 @@
                                                     class="form-control @error('philhealth') is-invalid @enderror"
                                                     placeholder="PHILHEALTH ID No." value="{{ old('philhealth') }}">
                                                 @error('philhealth')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -252,7 +253,7 @@
                                                     class="form-control @error('sss') is-invalid @enderror"
                                                     placeholder="SSS No." value="{{ old('sss') }}">
                                                 @error('sss')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -265,7 +266,7 @@
                                                     class="form-control @error('tin') is-invalid @enderror"
                                                     placeholder="TIN" value="{{ old('tin') }}">
                                                 @error('tin')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -278,7 +279,7 @@
                                                     class="form-control @error('agency') is-invalid @enderror"
                                                     placeholder="AGENCY EMPLOYEE No." value="{{ old('agency') }}">
                                                 @error('agency')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -293,8 +294,8 @@
                                                 <div class="row">
                                                     <div class="col-sm-4" id="FilipinoCheckbox">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="defaultCheck10">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="" id="defaultCheck10">
                                                             <label class="form-check-label" for="defaultCheck10">
                                                                 Fillipino
                                                             </label>
@@ -302,8 +303,8 @@
                                                     </div>
                                                     <div class="col-sm-8">
                                                         <div class="form-check" id="DualCitizenshipCheckbox">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="defaultCheck10">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="" id="defaultCheck10">
                                                             <label class="form-check-label" for="defaultCheck10">
                                                                 Dual Citizenship
                                                             </label>
@@ -316,8 +317,8 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="ByBirthCheckbox">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            value="" id="ByBirthCheckbox">
                                                         <label class="form-check-label" for="defaultCheck10">
                                                             By Birth
                                                         </label>
@@ -325,8 +326,8 @@
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="ByNaturalizationCheckbox">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            value="" id="ByNaturalizationCheckbox">
                                                         <label class="form-check-label" for="defaultCheck10">
                                                             By Naturalization
                                                         </label>
@@ -336,7 +337,8 @@
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="">
-                                                <label for="country" style="display: inline-block;
+                                                <label for="country"
+                                                    style="display: inline-block;
                                                 width: 200px;">Pls.
                                                     Indicate Country</label>
                                                 <div style="width: ">
@@ -363,7 +365,7 @@
                                                     placeholder="House/Block/Lot No." value="{{ old('house') }}">
                                                 <label for="floatingInput">House/Block/Lot No.</label>
                                                 @error('house')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -374,7 +376,7 @@
                                                     placeholder="Street" value="{{ old('street') }}">
                                                 <label for="floatingInput">Street</label>
                                                 @error('street')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -382,10 +384,11 @@
                                             <div class="form-floating mb-3">
                                                 <input type="text" id="subdivision" name="subdivision"
                                                     class="form-control @error('subdivision') is-invalid @enderror"
-                                                    placeholder="Subdivision/Village" value="{{ old('subdivision') }}">
+                                                    placeholder="Subdivision/Village"
+                                                    value="{{ old('subdivision') }}">
                                                 <label for="floatingInput">Subdivision/Village</label>
                                                 @error('subdivision')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -396,7 +399,7 @@
                                                     placeholder="Barangay" value="{{ old('barangay') }}">
                                                 <label for="floatingInput">Barangay</label>
                                                 @error('barangay')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -404,10 +407,11 @@
                                             <div class="form-floating mb-3">
                                                 <input type="text" id="municipality" name="municipality"
                                                     class="form-control @error('municipality') is-invalid @enderror"
-                                                    placeholder="City/Municipality" value="{{ old('municipality') }}">
+                                                    placeholder="City/Municipality"
+                                                    value="{{ old('municipality') }}">
                                                 <label for="floatingInput">City/Municipality</label>
                                                 @error('municipality')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -418,7 +422,7 @@
                                                     placeholder="Province" value="{{ old('province') }}">
                                                 <label for="floatingInput">Province</label>
                                                 @error('province')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -429,7 +433,7 @@
                                                     placeholder="Zip Code" value="{{ old('zipcode') }}">
                                                 <label for="floatingInput">Zip Code</label>
                                                 @error('zipcode')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -451,7 +455,7 @@
                                                     placeholder="House/Block/Lot No." value="{{ old('house2') }}">
                                                 <label for="floatingInput">House/Block/Lot No.</label>
                                                 @error('house2')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -462,7 +466,7 @@
                                                     placeholder="Street" value="{{ old('street2') }}">
                                                 <label for="floatingInput">Street</label>
                                                 @error('street2')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -470,10 +474,11 @@
                                             <div class="form-floating mb-3">
                                                 <input type="text" id="subdivision2" name="subdivision2"
                                                     class="form-control @error('subdivision2') is-invalid @enderror"
-                                                    placeholder="Subdivision/Village" value="{{ old('subdivision2') }}">
+                                                    placeholder="Subdivision/Village"
+                                                    value="{{ old('subdivision2') }}">
                                                 <label for="floatingInput">Subdivision/Village</label>
                                                 @error('subdivision2')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -484,7 +489,7 @@
                                                     placeholder="Barangay" value="{{ old('barangay2') }}">
                                                 <label for="floatingInput">Barangay</label>
                                                 @error('barangay2')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -492,10 +497,11 @@
                                             <div class="form-floating mb-3">
                                                 <input type="text" id="municipality2" name="municipality2"
                                                     class="form-control @error('municipality2') is-invalid @enderror"
-                                                    placeholder="City/Municipality" value="{{ old('municipality2') }}">
+                                                    placeholder="City/Municipality"
+                                                    value="{{ old('municipality2') }}">
                                                 <label for="floatingInput">City/Municipality</label>
                                                 @error('municipality2')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -506,7 +512,7 @@
                                                     placeholder="Province" value="{{ old('province2') }}">
                                                 <label for="floatingInput">Province</label>
                                                 @error('province2')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
@@ -518,331 +524,342 @@
                                                 <label for="floatingInput">Zip Code</label>
 
                                                 @error('zipcode2')
-                                                <x-input-error message="{{ $message }}" />
+                                                    <x-input-error message="{{ $message }}" />
                                                 @enderror
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <button class="btn btn-gray-800 mt-2 animate-up-2" type="submit"><i
+                                                class="me-2 bi bi-save"></i> Update</button>
+                                        <a href="{{ route('users.index') }}"
+                                            class="btn btn-gray-800 mt-2 animate-up-2"><i class="me-2 bi bi-back"></i>
+                                            Back</a>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="tabs-family-background" role="tabpanel"
-            aria-labelledby="tabs-waybill-particulars-tab">
-            <div class="row">
-                <div class="col-12 col-xl-12">
-                    <div class="card card-body border-0 shadow mb-4">
-                        <h2 class="h5 mb-4">Family Background</h2>
-                        <form method="POST" action="">
-                            @csrf
-                            @method('PUT')
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group mb-3">
-                                        <label for="first_name">First Name
-                                            <x-asterisks />
-                                        </label>
-                                        <input type="text" id="first_name" name="first_name"
-                                            class="form-control @error('first_name') is-invalid @enderror"
-                                            placeholder="First Name" value="{{ old('first_name') }}">
-                                        @error('first_name')
-                                        <x-input-error message="{{ $message }}" />
-                                        @enderror
+                <div class="tab-pane fade" id="tabs-family-background" role="tabpanel"
+                    aria-labelledby="tabs-waybill-particulars-tab">
+                    <div class="row">
+                        <div class="col-12 col-xl-12">
+                            <div class="card card-body border-0 shadow mb-4">
+                                <h2 class="h5 mb-4">Family Background</h2>
+                                <form method="POST" action="">
+                                    @csrf
+                                    @method('PUT')
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label for="first_name">First Name
+                                                    <x-asterisks />
+                                                </label>
+                                                <input type="text" id="first_name" name="first_name"
+                                                    class="form-control @error('first_name') is-invalid @enderror"
+                                                    placeholder="First Name" value="{{ old('first_name') }}">
+                                                @error('first_name')
+                                                    <x-input-error message="{{ $message }}" />
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label for="middle_name">Middle Name</label>
+                                                <input type="text" id="middle_name" name="middle_name"
+                                                    class="form-control @error('middle_name') is-invalid @enderror"
+                                                    placeholder="Middle Name" value="{{ old('middle_name') }}">
+                                                @error('middle_name')
+                                                    <x-input-error message="{{ $message }}" />
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label for="surname">Last Name
+                                                    <x-asterisks />
+                                                </label>
+                                                <input type="text" id="surname" name="surname"
+                                                    class="form-control @error('surname') is-invalid @enderror"
+                                                    placeholder="Last Name" value="{{ old('surname') }}">
+                                                @error('surname')
+                                                    <x-input-error message="{{ $message }}" />
+                                                @enderror
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group mb-3">
-                                        <label for="middle_name">Middle Name</label>
-                                        <input type="text" id="middle_name" name="middle_name"
-                                            class="form-control @error('middle_name') is-invalid @enderror"
-                                            placeholder="Middle Name" value="{{ old('middle_name') }}">
-                                        @error('middle_name')
-                                        <x-input-error message="{{ $message }}" />
-                                        @enderror
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label for="email">Email
+                                                    <x-asterisks />
+                                                </label>
+                                                <input type="email" id="email" name="email"
+                                                    class="form-control @error('email') is-invalid @enderror"
+                                                    placeholder="Email" value="{{ old('email') }}">
+                                                @error('email')
+                                                    <x-input-error message="{{ $message }}" />
+                                                @enderror
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group mb-3">
-                                        <label for="surname">Last Name
-                                            <x-asterisks />
-                                        </label>
-                                        <input type="text" id="surname" name="surname"
-                                            class="form-control @error('surname') is-invalid @enderror"
-                                            placeholder="Last Name" value="{{ old('surname') }}">
-                                        @error('surname')
-                                        <x-input-error message="{{ $message }}" />
-                                        @enderror
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label for="password">Password
+                                                    <x-asterisks />
+                                                </label>
+                                                <input type="password" id="password" name="password"
+                                                    class="form-control @error('password') is-invalid @enderror"
+                                                    placeholder="Password">
+                                                @error('password')
+                                                    <x-input-error message="{{ $message }}" />
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label for="password_confirmation">Confirm Password
+                                                    <x-asterisks />
+                                                </label>
+                                                <input class="form-control" id="password_confirmation"
+                                                    name="password_confirmation" type="password"
+                                                    placeholder="Confirm Password">
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+
+                                    <div class="mt-3">
+                                        <button class="btn btn-gray-800 mt-2 animate-up-2" type="submit"><i
+                                                class="me-2 bi bi-save"></i> Update</button>
+                                        <a href="{{ route('users.index') }}"
+                                            class="btn btn-gray-800 mt-2 animate-up-2"><i class="me-2 bi bi-back"></i>
+                                            Back</a>
+                                    </div>
+
+                                </form>
+
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group mb-3">
-                                        <label for="email">Email
-                                            <x-asterisks />
-                                        </label>
-                                        <input type="email" id="email" name="email"
-                                            class="form-control @error('email') is-invalid @enderror"
-                                            placeholder="Email" value="{{ old('email') }}">
-                                        @error('email')
-                                        <x-input-error message="{{ $message }}" />
-                                        @enderror
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group mb-3">
-                                        <label for="password">Password
-                                            <x-asterisks />
-                                        </label>
-                                        <input type="password" id="password" name="password"
-                                            class="form-control @error('password') is-invalid @enderror"
-                                            placeholder="Password">
-                                        @error('password')
-                                        <x-input-error message="{{ $message }}" />
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group mb-3">
-                                        <label for="password_confirmation">Confirm Password
-                                            <x-asterisks />
-                                        </label>
-                                        <input class="form-control" id="password_confirmation"
-                                            name="password_confirmation" type="password" placeholder="Confirm Password">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mt-3">
-                                <button class="btn btn-gray-800 mt-2 animate-up-2" type="submit"><i
-                                        class="me-2 bi bi-save"></i> Update</button>
-                                <a href="{{ route('users.index') }}" class="btn btn-gray-800 mt-2 animate-up-2"><i
-                                        class="me-2 bi bi-back"></i>
-                                    Back</a>
-                            </div>
-
-                        </form>
+                        </div>
 
                     </div>
-
                 </div>
+                <div class="tab-pane fade" id="tabs-waybill-containers" role="tabpanel"
+                    aria-labelledby="tabs-waybill-containers-tab">
+                    <div class="row">
+                        <div class="col-12 col-xl-12">
 
-            </div>
-        </div>
-        <div class="tab-pane fade" id="tabs-waybill-containers" role="tabpanel"
-            aria-labelledby="tabs-waybill-containers-tab">
-            <div class="row">
-                <div class="col-12 col-xl-12">
+                            <div class="card card-body border-0 shadow mb-4">
+                                <h2 class="h5 mb-4">Children</h2>
 
-                    <div class="card card-body border-0 shadow mb-4">
-                        <h2 class="h5 mb-4">Children</h2>
+                                <form method="POST" action="">
+                                    @csrf
+                                    @method('PUT')
 
-                        <form method="POST" action="">
-                            @csrf
-                            @method('PUT')
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group mb-3">
-                                        <label for="first_name">First Name
-                                            <x-asterisks />
-                                        </label>
-                                        <input type="text" id="first_name" name="first_name"
-                                            class="form-control @error('first_name') is-invalid @enderror"
-                                            placeholder="First Name" value="{{ old('first_name') }}">
-                                        @error('first_name')
-                                        <x-input-error message="{{ $message }}" />
-                                        @enderror
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label for="first_name">First Name
+                                                    <x-asterisks />
+                                                </label>
+                                                <input type="text" id="first_name" name="first_name"
+                                                    class="form-control @error('first_name') is-invalid @enderror"
+                                                    placeholder="First Name" value="{{ old('first_name') }}">
+                                                @error('first_name')
+                                                    <x-input-error message="{{ $message }}" />
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label for="middle_name">Middle Name</label>
+                                                <input type="text" id="middle_name" name="middle_name"
+                                                    class="form-control @error('middle_name') is-invalid @enderror"
+                                                    placeholder="Middle Name" value="{{ old('middle_name') }}">
+                                                @error('middle_name')
+                                                    <x-input-error message="{{ $message }}" />
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label for="surname">Last Name
+                                                    <x-asterisks />
+                                                </label>
+                                                <input type="text" id="surname" name="surname"
+                                                    class="form-control @error('surname') is-invalid @enderror"
+                                                    placeholder="Last Name" value="{{ old('surname') }}">
+                                                @error('surname')
+                                                    <x-input-error message="{{ $message }}" />
+                                                @enderror
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group mb-3">
-                                        <label for="middle_name">Middle Name</label>
-                                        <input type="text" id="middle_name" name="middle_name"
-                                            class="form-control @error('middle_name') is-invalid @enderror"
-                                            placeholder="Middle Name" value="{{ old('middle_name') }}">
-                                        @error('middle_name')
-                                        <x-input-error message="{{ $message }}" />
-                                        @enderror
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label for="email">Email
+                                                    <x-asterisks />
+                                                </label>
+                                                <input type="email" id="email" name="email"
+                                                    class="form-control @error('email') is-invalid @enderror"
+                                                    placeholder="Email" value="{{ old('email') }}">
+                                                @error('email')
+                                                    <x-input-error message="{{ $message }}" />
+                                                @enderror
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group mb-3">
-                                        <label for="surname">Last Name
-                                            <x-asterisks />
-                                        </label>
-                                        <input type="text" id="surname" name="surname"
-                                            class="form-control @error('surname') is-invalid @enderror"
-                                            placeholder="Last Name" value="{{ old('surname') }}">
-                                        @error('surname')
-                                        <x-input-error message="{{ $message }}" />
-                                        @enderror
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label for="password">Password
+                                                    <x-asterisks />
+                                                </label>
+                                                <input type="password" id="password" name="password"
+                                                    class="form-control @error('password') is-invalid @enderror"
+                                                    placeholder="Password">
+                                                @error('password')
+                                                    <x-input-error message="{{ $message }}" />
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label for="password_confirmation">Confirm Password
+                                                    <x-asterisks />
+                                                </label>
+                                                <input class="form-control" id="password_confirmation"
+                                                    name="password_confirmation" type="password"
+                                                    placeholder="Confirm Password">
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+
+                                    <div class="mt-3">
+                                        <button class="btn btn-gray-800 mt-2 animate-up-2" type="submit"><i
+                                                class="me-2 bi bi-save"></i> Update</button>
+                                        <a href="{{ route('users.index') }}"
+                                            class="btn btn-gray-800 mt-2 animate-up-2"><i class="me-2 bi bi-back"></i>
+                                            Back</a>
+                                    </div>
+
+                                </form>
                             </div>
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group mb-3">
-                                        <label for="email">Email
-                                            <x-asterisks />
-                                        </label>
-                                        <input type="email" id="email" name="email"
-                                            class="form-control @error('email') is-invalid @enderror"
-                                            placeholder="Email" value="{{ old('email') }}">
-                                        @error('email')
-                                        <x-input-error message="{{ $message }}" />
-                                        @enderror
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group mb-3">
-                                        <label for="password">Password
-                                            <x-asterisks />
-                                        </label>
-                                        <input type="password" id="password" name="password"
-                                            class="form-control @error('password') is-invalid @enderror"
-                                            placeholder="Password">
-                                        @error('password')
-                                        <x-input-error message="{{ $message }}" />
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group mb-3">
-                                        <label for="password_confirmation">Confirm Password
-                                            <x-asterisks />
-                                        </label>
-                                        <input class="form-control" id="password_confirmation"
-                                            name="password_confirmation" type="password" placeholder="Confirm Password">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mt-3">
-                                <button class="btn btn-gray-800 mt-2 animate-up-2" type="submit"><i
-                                        class="me-2 bi bi-save"></i> Update</button>
-                                <a href="{{ route('users.index') }}" class="btn btn-gray-800 mt-2 animate-up-2"><i
-                                        class="me-2 bi bi-back"></i>
-                                    Back</a>
-                            </div>
-
-                        </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="tabs-waybill-charges" role="tabpanel" aria-labelledby="tabs-waybill-charges-tab">
-            <div class="row">
-                <div class="col-12 col-xl-12">
-                    <div class="col-12 col-xl-12">
-                        <div class="card card-body border-0 shadow mb-4">
-                            <h2 class="h5 mb-4">Educational Background</h2>
-                            <form method="POST" action="">
-                                @csrf
-                                @method('PUT')
+                <div class="tab-pane fade" id="tabs-waybill-charges" role="tabpanel"
+                    aria-labelledby="tabs-waybill-charges-tab">
+                    <div class="row">
+                        <div class="col-12 col-xl-12">
+                            <div class="col-12 col-xl-12">
+                                <div class="card card-body border-0 shadow mb-4">
+                                    <h2 class="h5 mb-4">Educational Background</h2>
+                                    <form method="POST" action="">
+                                        @csrf
+                                        @method('PUT')
 
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group mb-3">
-                                            <label for="first_name">First Name
-                                                <x-asterisks />
-                                            </label>
-                                            <input type="text" id="first_name" name="first_name"
-                                                class="form-control @error('first_name') is-invalid @enderror"
-                                                placeholder="First Name" value="{{ old('first_name') }}">
-                                            @error('first_name')
-                                            <x-input-error message="{{ $message }}" />
-                                            @enderror
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label for="first_name">First Name
+                                                        <x-asterisks />
+                                                    </label>
+                                                    <input type="text" id="first_name" name="first_name"
+                                                        class="form-control @error('first_name') is-invalid @enderror"
+                                                        placeholder="First Name" value="{{ old('first_name') }}">
+                                                    @error('first_name')
+                                                        <x-input-error message="{{ $message }}" />
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label for="middle_name">Middle Name</label>
+                                                    <input type="text" id="middle_name" name="middle_name"
+                                                        class="form-control @error('middle_name') is-invalid @enderror"
+                                                        placeholder="Middle Name" value="{{ old('middle_name') }}">
+                                                    @error('middle_name')
+                                                        <x-input-error message="{{ $message }}" />
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label for="surname">Last Name
+                                                        <x-asterisks />
+                                                    </label>
+                                                    <input type="text" id="surname" name="surname"
+                                                        class="form-control @error('surname') is-invalid @enderror"
+                                                        placeholder="Last Name" value="{{ old('surname') }}">
+                                                    @error('surname')
+                                                        <x-input-error message="{{ $message }}" />
+                                                    @enderror
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group mb-3">
-                                            <label for="middle_name">Middle Name</label>
-                                            <input type="text" id="middle_name" name="middle_name"
-                                                class="form-control @error('middle_name') is-invalid @enderror"
-                                                placeholder="Middle Name" value="{{ old('middle_name') }}">
-                                            @error('middle_name')
-                                            <x-input-error message="{{ $message }}" />
-                                            @enderror
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label for="email">Email
+                                                        <x-asterisks />
+                                                    </label>
+                                                    <input type="email" id="email" name="email"
+                                                        class="form-control @error('email') is-invalid @enderror"
+                                                        placeholder="Email" value="{{ old('email') }}">
+                                                    @error('email')
+                                                        <x-input-error message="{{ $message }}" />
+                                                    @enderror
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group mb-3">
-                                            <label for="surname">Last Name
-                                                <x-asterisks />
-                                            </label>
-                                            <input type="text" id="surname" name="surname"
-                                                class="form-control @error('surname') is-invalid @enderror"
-                                                placeholder="Last Name" value="{{ old('surname') }}">
-                                            @error('surname')
-                                            <x-input-error message="{{ $message }}" />
-                                            @enderror
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label for="password">Password
+                                                        <x-asterisks />
+                                                    </label>
+                                                    <input type="password" id="password" name="password"
+                                                        class="form-control @error('password') is-invalid @enderror"
+                                                        placeholder="Password">
+                                                    @error('password')
+                                                        <x-input-error message="{{ $message }}" />
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label for="password_confirmation">Confirm Password
+                                                        <x-asterisks />
+                                                    </label>
+                                                    <input class="form-control" id="password_confirmation"
+                                                        name="password_confirmation" type="password"
+                                                        placeholder="Confirm Password">
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
+
+                                        <div class="mt-3">
+                                            <button class="btn btn-gray-800 mt-2 animate-up-2" type="submit"><i
+                                                    class="me-2 bi bi-save"></i> Update</button>
+                                            <a href="{{ route('users.index') }}"
+                                                class="btn btn-gray-800 mt-2 animate-up-2"><i
+                                                    class="me-2 bi bi-back"></i>
+                                                Back</a>
+                                        </div>
+
+                                    </form>
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group mb-3">
-                                            <label for="email">Email
-                                                <x-asterisks />
-                                            </label>
-                                            <input type="email" id="email" name="email"
-                                                class="form-control @error('email') is-invalid @enderror"
-                                                placeholder="Email" value="{{ old('email') }}">
-                                            @error('email')
-                                            <x-input-error message="{{ $message }}" />
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group mb-3">
-                                            <label for="password">Password
-                                                <x-asterisks />
-                                            </label>
-                                            <input type="password" id="password" name="password"
-                                                class="form-control @error('password') is-invalid @enderror"
-                                                placeholder="Password">
-                                            @error('password')
-                                            <x-input-error message="{{ $message }}" />
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group mb-3">
-                                            <label for="password_confirmation">Confirm Password
-                                                <x-asterisks />
-                                            </label>
-                                            <input class="form-control" id="password_confirmation"
-                                                name="password_confirmation" type="password"
-                                                placeholder="Confirm Password">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="mt-3">
-                                    <button class="btn btn-gray-800 mt-2 animate-up-2" type="submit"><i
-                                            class="me-2 bi bi-save"></i> Update</button>
-                                    <a href="{{ route('users.index') }}" class="btn btn-gray-800 mt-2 animate-up-2"><i
-                                            class="me-2 bi bi-back"></i>
-                                        Back</a>
-                                </div>
-
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -853,6 +870,6 @@
 
 
     @push('scripts')
-    <script type="text/javascript" src="{{ asset('js/page/form/index.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/page/form/index.js') }}"></script>
     @endpush
 </x-app-layout>
