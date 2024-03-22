@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Web\User\UserController;
+use App\Http\Controllers\Web\Client\ClientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web\User\UserTable;
 
@@ -24,8 +25,11 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('users', UserController::class);
     Route::get('/form', function () {
-        return view('form');
+        return view('client.form');
     })->name('forms');
+
+    Route::resource('clients', ClientController::class);
+
 });
 
 require __DIR__ . '/auth.php';
