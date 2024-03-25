@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Hash;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\View\View;
 
-
 class UserController extends Controller
 {
     /**
@@ -58,6 +57,8 @@ class UserController extends Controller
         $user->password                     = $data['password'];
         $user->save();
 
+
+        Alert::toast('Contact Successfully Added', '');
         // redirection
         return redirect()->route('users.index');
     }

@@ -5,14 +5,14 @@ document.getElementById("civil_status").addEventListener("change", function () {
     var other_civil_status = document.getElementById("other_civil_status");
     var selectedOption = this.value;
 
-    if (selectedOption === "others") {
+    if (selectedOption === "Others") {
         other_civil_status.style.display = "block";
     } else {
         other_civil_status.style.display = "none";
     }
 });
 
-// For allow only one checkbox
+// to allow only one checkbox
 document.addEventListener('DOMContentLoaded', function() {
     const checkboxes = document.querySelectorAll('#checkboxes input[type="checkbox"]');
 
@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 // For the country dropdown
 document.addEventListener('DOMContentLoaded', function() {
     const countryDropdown = document.getElementById('country');

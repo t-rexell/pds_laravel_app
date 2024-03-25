@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Web\User\UserController;
 use App\Http\Controllers\Web\Client\ClientController;
+use App\Http\Controllers\Web\Client\PersonalInfoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web\User\UserTable;
 
@@ -28,7 +29,7 @@ Route::middleware('auth')->group(function () {
         return view('client.form');
     })->name('forms');
 
-    Route::resource('clients', ClientController::class);
+    Route::resource('clients', PersonalInfoController::class);
 
 });
 

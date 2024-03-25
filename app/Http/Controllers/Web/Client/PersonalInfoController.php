@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Web\Client;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Client\StoreClientRequest;
+use App\Http\Requests\Client\StorePersonalInfoRequest;
 use App\Models\ProfileInformation;
 use Illuminate\Http\Request;
 
-class ClientController extends Controller
+class PersonalInfoController extends Controller
 {
-    public function store(StoreClientRequest $request)
+    public function store(StorePersonalInfoRequest $request)
     {
         // dd($request->all());
         // validated data

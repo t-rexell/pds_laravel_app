@@ -6,26 +6,26 @@
                 <a class="nav-link mb-sm-3 mb-md-0" id="tabs-waybill-information-tab" data-bs-toggle="tab"
                     href="#tabs-personal-information" role="tab" aria-controls="tabs-waybill-information"
                     aria-selected="true"
-                    style="background: radial-gradient(circle, rgba(255,255,255,1) 0%, #a6b7df74 100%)">Personal
+                    style="background-image: radial-gradient(circle, #09203f 0%, #537895 100%); color: white">Personal
                     Information</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link mb-sm-3 mb-md-0" id="tabs-waybill-particulars-tab" data-bs-toggle="tab"
                     href="#tabs-family-background" role="tab" aria-controls="tabs-waybill-particulars"
                     aria-selected="false"
-                    style="background: radial-gradient(circle, rgba(255,255,255,1) 0%, #a6b7df74 100%)">Family
+                    style="background-image: radial-gradient(circle, #09203f 0%, #537895 100%); color: white">Family
                     Background</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link mb-sm-3 mb-md-0" id="tabs-waybill-conatiners-tab" data-bs-toggle="tab"
                     href="#tabs-waybill-containers" role="tab" aria-controls="tabs-waybill-containers"
                     aria-selected="false"
-                    style="background: radial-gradient(circle, rgba(255,255,255,1) 0%, #a6b7df74 100%)">Children</a>
+                    style="background-image: radial-gradient(circle, #09203f 0%, #537895 100%); color: white">Children</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link mb-sm-3 mb-md-0" id="tabs-waybill-charges-tab" data-bs-toggle="tab"
                     href="#tabs-waybill-charges" role="tab" aria-controls="tabs-waybill-charges" aria-selected="false"
-                    style="background: radial-gradient(circle, rgba(255,255,255,1) 0%, #a6b7df74 100%)">Educational
+                    style="background-image: radial-gradient(circle, #09203f 0%, #537895 100%); color: white">Educational
                     Background</a>
             </li>
 
@@ -144,8 +144,8 @@
                                             </label> <select class="form-select mb-0" id="sex"
                                                 aria-label="sex select example" name="sex">
                                                 {{-- <option selected="selected">Sex</option> --}}
-                                                <option value="male">Male</option>
-                                                <option value="female">Female</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
                                             </select>
                                         </div>
                                     </div>
