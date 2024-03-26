@@ -4,12 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Notifications\Notifiable;
 
 class ProfileInformation extends Model
 {
 
 
-    use HasFactory;
+    use HasFactory, Notifiable, SoftDeletes;
+
     protected $table="profile_informations";
     protected $fillable = [
         'first_name',

@@ -57,6 +57,13 @@ class PersonalInfoController extends Controller
 
 
         // redirection
-        return redirect()->route('users.index');
+        return redirect()->route('personal-info.index');
+    }
+
+    public function index()
+    {
+    //     $personalinfo = ProfileInformation::all();
+
+        return view('personalinfo.index');
     }
 }

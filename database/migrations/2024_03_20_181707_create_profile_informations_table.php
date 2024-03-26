@@ -49,6 +49,7 @@ return new class extends Migration
             $table->string('per_province');
             $table->string('per_zipcode');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

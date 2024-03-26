@@ -6,7 +6,8 @@
     </a>
     <div class="d-flex align-items-center">
         <button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
@@ -45,7 +46,7 @@
             <li class="nav-item">
                 <a href="{{ route('dashboard') }}" class="nav-link d-flex align-items-center">
                     <span class="sidebar-icon">
-                        {{-- <img src=""  width="20" alt="{{ config('app.name') }} Logo"> --}}
+                        {{-- <img src="" width="20" alt="{{ config('app.name') }} Logo"> --}}
                     </span>
                     <span class="mt-1 ms-1 sidebar-text">PDS Info System</span>
                 </a>
@@ -80,13 +81,13 @@
                 <div class="multi-level collapse {{ request()->routeIs('cprs.*') ? 'show' : '' }}" role="list"
                     id="submenu-cprs" aria-expanded="true">
                     <ul class="flex-column nav">
-                        <li class="nav-item {{ request()->routeIs('cprs.clients.*') ? 'active' : '' }}">
-                            <a class="nav-link" href="#">
+                        <li class="nav-item {{ request()->routeIs('personal-info.*') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('personal-info.index') }}">
                                 <span class="sidebar-text">Clients</span>
                             </a>
                         </li>
-                        <li class="nav-item {{ request()->routeIs('cprs.forms.*') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('forms') }}">
+                        <li class="nav-item {{ request()->routeIs('forms*') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('form') }}">
                                 <span class="sidebar-text">Forms</span>
                             </a>
                         </li>
