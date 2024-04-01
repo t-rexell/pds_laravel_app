@@ -130,7 +130,6 @@ class StorePersonalInfoRequest extends FormRequest
                 'required',
                 'string',
             ],
-
         ];
     }
 }

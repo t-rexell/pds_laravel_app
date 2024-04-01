@@ -21,7 +21,7 @@ class PersonalInfoTable extends Controller
             $personalinfo = ProfileInformation::select('id', 'first_name', 'middle_name', 'surname', 'created_at');
 
             return DataTables::of($personalinfo)
-                ->addColumn('action', 'user.table-buttons')
+                ->addColumn('action', 'personalinfo.table-buttons')
                 ->toJson();
         }
     }

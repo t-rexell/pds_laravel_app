@@ -15,7 +15,7 @@
                     </p>
                 </div>
 
-                <form method="POST" action="{{ route('personal-info.store') }}">
+                <form method="POST" action="">
                     @csrf
                     @method('POST')
 

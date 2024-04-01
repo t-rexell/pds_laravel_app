@@ -32,7 +32,7 @@ Route::middleware('auth')->group(function () {
         return view('personalinfo.form');
     })->name('form');
 
-    Route::resource('personal-info', PersonalInfoController::class);
+    Route::resource('personalinfo', PersonalInfoController::class);
 
     Route::get('personal/info/table', PersonalInfoTable::class)->name('table');
 });

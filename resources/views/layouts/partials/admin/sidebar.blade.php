@@ -81,8 +81,8 @@
                 <div class="multi-level collapse {{ request()->routeIs('cprs.*') ? 'show' : '' }}" role="list"
                     id="submenu-cprs" aria-expanded="true">
                     <ul class="flex-column nav">
-                        <li class="nav-item {{ request()->routeIs('personal-info.*') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('personal-info.index') }}">
+                        <li class="nav-item {{ request()->routeIs('personalinfo.*') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('personalinfo.index') }}">
                                 <span class="sidebar-text">Clients</span>
                             </a>
                         </li>

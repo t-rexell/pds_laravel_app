@@ -10,6 +10,8 @@
                 Background</button>
             <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
                 type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Children </button>
+            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Children </button>
         </div>
     </nav>
     <div style="margin: 20px"></div>
@@ -32,7 +34,7 @@
                             </p>
                         </div>
 
-                        <form method="POST" action="{{ route('personal-info.store') }}">
+                        <form method="POST" action="{{ route('personalinfo.store') }}">
                             @csrf
                             @method('POST')
 
