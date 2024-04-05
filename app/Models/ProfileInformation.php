@@ -51,4 +51,9 @@ class ProfileInformation extends Model
         'per_province',
         'per_zipcode',
     ];
+
+    
+    public function civilService(){
+        return $this->hasMany(CivilService::class);
+    }
 }

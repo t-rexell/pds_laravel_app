@@ -9,11 +9,9 @@
             <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
                 data-bs-target="#tabs-personal-information" type="button" role="tab" aria-controls="nav-home"
                 aria-selected="true">Personal Information</button>
-            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#tabs-family-background"
-                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Family
-                Background</button>
-            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Children </button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#tabs-civil-service"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Civil Service</button>
+
         </div>
     </nav>
     <div style="margin: 20px"></div>
@@ -106,7 +104,8 @@
                                                         clip-rule="evenodd"></path>
                                                 </svg> </span><input data-datepicker=""
                                                 class="form-control datepicker-input" id="birthday" type="text"
-                                                placeholder="dd/mm/yyyy" required="" name="birthday" value="{{ $personalinfo->birthday }}"></div>
+                                                placeholder="dd/mm/yyyy" required="" name="birthday"
+                                                value="{{ $personalinfo->birthday }}"></div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -318,7 +317,8 @@
                                                 <div class="form-check" id="DualCitizenshipCheckbox">
                                                     <input class="form-check-input" type="checkbox"
                                                         value="Dual Citizenship" id="DualCitizenshipCheckbox"
-                                                        @if($personalinfo->citizenship1 == 'Dual Citizenship') checked @endif
+                                                        @if($personalinfo->citizenship1 == 'Dual Citizenship') checked
+                                                    @endif
                                                     name="citizenship1" @error('DualCitizenshipCheckbox') is-invalid
                                                     @enderror">
                                                     @error('DualCitizenshipCheckbox')
@@ -355,7 +355,8 @@
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox"
                                                     value="By Naturalization" id="ByNaturalizationCheckbox"
-                                                    name="citizenship2" @if($personalinfo->citizenship2 == 'By Naturalization') checked @endif>
+                                                    name="citizenship2" @if($personalinfo->citizenship2 == 'By
+                                                Naturalization') checked @endif>
                                                 <label class="form-check-label" for="defaultCheck10">
                                                     By Naturalization
                                                 </label>
@@ -576,8 +577,9 @@
     </div>
     {{-- @include('familybackground.create') --}}
 
-    @include('children.create')
-    @include('familybackground.create')
+    {{-- @include('children.create')
+    @include('familybackground.create') --}}
+    @include('civilservice.edit')
 
 
     </div>
