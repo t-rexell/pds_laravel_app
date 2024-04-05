@@ -42,6 +42,8 @@
 	{{-- page specific css --}}
 	@stack('styles')
 
+    @livewireStyles
+
 </head>
 
 <body>
@@ -94,6 +96,8 @@
 
 	{{-- page specific js files --}}
 	@stack('scripts')
+
+    @livewireStyles
 
 </body>
 

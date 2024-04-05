@@ -378,12 +378,19 @@
                                                 </div>
                                                 <div class="col-sm-7" id="country_dropdown">
                                                     <select class="form-select mb-0" id="country"
-                                                        aria-label="civil_status select example" style="" value=""
+                                                        aria-label="civil_status select example" style=""
                                                         name="citizenship3">
-                                                        <option value="...">...</option>
+                                                        <option value="N/A" selected>...</option>
                                                     </select>
                                                 </div>
                                             </div>
+                                            @error('citizenship3')
+                                            <div class="col-12">
+                                                <span class="invalid-feedback d-block" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            </div>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>

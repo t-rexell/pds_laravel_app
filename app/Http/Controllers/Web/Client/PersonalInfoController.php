@@ -68,6 +68,7 @@ class PersonalInfoController extends Controller
 
     public function update(UpdatePersonalInfoRequest $request, ProfileInformation $personalinfo)
     {
+
         $data = $request->validated();
 
         $personalinfo->first_name                     = $data['first_name'];

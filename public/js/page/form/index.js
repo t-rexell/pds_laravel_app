@@ -55,12 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 option.text = country.name.common;
                 countryDropdown.appendChild(option);
             });
-
-            // Pre-select the country if it matches the data from the database
-            const selectedCountry = "{{ $personalinfo->citizenship3 }}";
-            if (selectedCountry) {
-                countryDropdown.value = selectedCountry;
-            }
         })
         .catch(error => console.error('Error fetching country data:', error));
 });
