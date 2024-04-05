@@ -47,6 +47,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
 
 	@include('layouts.partials.admin.sidebar')
 

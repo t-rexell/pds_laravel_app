@@ -7,6 +7,8 @@ use App\Http\Requests\Client\StorePersonalInfoRequest;
 use App\Http\Requests\Client\UpdatePersonalInfoRequest;
 use App\Models\ProfileInformation;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class PersonalInfoController extends Controller
 {
@@ -55,10 +57,11 @@ class PersonalInfoController extends Controller
         $personalinfo->per_zipcode                   = $data['per_zipcode'];
         $personalinfo->save();
 
+        Alert::toast('Personal Information Successfully Added', 'success');
 
-
-        // redirection
         return redirect()->route('personalinfo.index');
+
+
     }
 
     public function index()
@@ -106,8 +109,9 @@ class PersonalInfoController extends Controller
         $personalinfo->per_municipality                     = $data['per_municipality'];
         $personalinfo->per_province                     = $data['per_province'];
         $personalinfo->per_zipcode                     = $data['per_zipcode'];
-
         $personalinfo->update();
+
+		Alert::toast('Personal Information Successfully Updated', 'success');
 
         return redirect()->route('personalinfo.index');
     }
