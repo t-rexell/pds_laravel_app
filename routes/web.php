@@ -35,6 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('personalinfo', PersonalInfoController::class);
     Route::get('personal/info/table', PersonalInfoTable::class)->name('table');
     Route::put('personalinfo/familybackground/{personalinfo}', FamilyBackgroundController::class)->name('familybackground.update');
+    
 });
 
 require __DIR__ . '/auth.php';

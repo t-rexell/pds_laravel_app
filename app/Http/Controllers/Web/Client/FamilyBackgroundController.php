@@ -11,9 +11,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class FamilyBackgroundController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
+
     public function __invoke(UpdateFamilyBackgroundRequest $request, ProfileInformation $personalinfo)
     {
 
