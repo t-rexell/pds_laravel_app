@@ -1,6 +1,6 @@
 <div>
-    <div class="modal-header">
-        <h5 class="modal-title">{{ $civilService ? 'Update': 'Add' }} Civil Service</h5>
+    <div class="modal-header" style="justify-content: center; background-color: #76e8f7">
+        <h5 class="modal-title" style="font-weight: bold; text-align: center">{{ $civilService ? 'Update': 'Add' }} Civil Service</h5>
         <span class="pull-right" wire:loading>
             <img src="{{ asset('img/spinner.gif') }}">
         </span>
@@ -10,69 +10,79 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group mb-3">
-                        <label for="career_service">Career Service
-                            <x-asterisks />
-                        </label>
-                        <input type="text" wire:model="career_service"
-                            class="form-control @error('career_service') is-invalid @enderror" id="career_service"
-                            placeholder="Career Service" />
-                        @error('career_service')
-                        <x-input-error message="{{ $message }}" />
-                        @enderror
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="career_service">Career Service
+                                    <x-asterisks />
+                                </label>
+                                <input type="text" wire:model="career_service"
+                                    class="form-control @error('career_service') is-invalid @enderror" id="career_service"
+                                    placeholder="Career Service" />
+                                @error('career_service')
+                                <x-input-error message="{{ $message }}" />
+                                @enderror
+                            </div>
+                            <div class="col-md-3">
+                                <label for="rating">Rating
+                                    <x-asterisks />
+                                </label>
+                                <input type="number" wire:model="rating"
+                                    class="form-control @error('rating') is-invalid @enderror" placeholder="Rating">
+                                @error('rating')
+                                <x-input-error message="{{ $message }}" />
+                                @enderror
+                            </div>
+                            <div class="col-md-3">
+                                <label for="examination_date">Examination Date
+                                    <x-asterisks />
+                                </label>
+                                <input type="date" wire:model="examination_date" max="{{ date('Y-m-d', time()) }}"
+                                    class="form-control @error('examination_date') is-invalid @enderror" id="examination_date"
+                                    placeholder="Career Service" />
+                                @error('examination_date')
+                                <x-input-error message="{{ $message }}" />
+                                @enderror
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="rating">Rating
-                            <x-asterisks />
-                        </label>
-                        <input type="number" wire:model="rating"
-                            class="form-control @error('rating') is-invalid @enderror" placeholder="Rating">
-                        @error('rating')
-                        <x-input-error message="{{ $message }}" />
-                        @enderror
+                        <div class="row">
+                            <div class="col-md-8">
+                                <label for="examination_place">Examination Place
+                                    <x-asterisks />
+                                </label>
+                                <input type="text" wire:model="examination_place"
+                                    class="form-control @error('examination_place') is-invalid @enderror" id="examination_place"
+                                    placeholder="Examination Place" />
+                                @error('examination_place')
+                                <x-input-error message="{{ $message }}" />
+                                @enderror
+                            </div>
+                            <div class="col-md-4">
+                                <label for="license_number">License Number
+                                    <x-asterisks />
+                                </label>
+                                <input type="text" wire:model="license_number"
+                                    class="form-control @error('license_number') is-invalid @enderror" id="license_number"
+                                    placeholder="Examination Place" />
+                                @error('license_number')
+                                <x-input-error message="{{ $message }}" />
+                                @enderror
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="examination_date">Examination Date
-                            <x-asterisks />
-                        </label>
-                        <input type="date" wire:model="examination_date" max="{{ date('Y-m-d', time()) }}"
-                            class="form-control @error('examination_date') is-invalid @enderror" id="examination_date"
-                            placeholder="Career Service" />
-                        @error('examination_date')
-                        <x-input-error message="{{ $message }}" />
-                        @enderror
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="examination_place">Examination Place
-                            <x-asterisks />
-                        </label>
-                        <input type="text" wire:model="examination_place"
-                            class="form-control @error('examination_place') is-invalid @enderror" id="examination_place"
-                            placeholder="Examination Place" />
-                        @error('examination_place')
-                        <x-input-error message="{{ $message }}" />
-                        @enderror
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="license_number">License Number
-                            <x-asterisks />
-                        </label>
-                        <input type="text" wire:model="license_number"
-                            class="form-control @error('license_number') is-invalid @enderror" id="license_number"
-                            placeholder="Examination Place" />
-                        @error('license_number')
-                        <x-input-error message="{{ $message }}" />
-                        @enderror
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="license_validity_date">License Validity (if applicable)
-                            <x-asterisks />
-                        </label>
-                        <input type="date" wire:model="license_validity_date"
-                            class="form-control @error('license_validity_date') is-invalid @enderror"
-                            id="license_validity_date" placeholder="Examination Place" />
-                        @error('license_validity_date')
-                        <x-input-error message="{{ $message }}" />
-                        @enderror
+                        <div style="align-items: center; justify-content: center; ">
+                            <label for="license_validity_date">License Validity (if applicable)
+                                <x-asterisks />
+                            </label>
+                            <input type="date" wire:model="license_validity_date"
+                                class="form-control @error('license_validity_date') is-invalid @enderror"
+                                id="license_validity_date" placeholder="Examination Place" style="width: 200px" />
+                            @error('license_validity_date')
+                            <x-input-error message="{{ $message }}" />
+                            @enderror
+                        </div>
                     </div>
                 </div>
             </div>

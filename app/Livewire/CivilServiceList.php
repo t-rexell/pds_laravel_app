@@ -9,6 +9,7 @@ use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithPagination;
 
+
 class CivilServiceList extends Component
 {
     use WithPagination;
@@ -68,9 +69,12 @@ class CivilServiceList extends Component
         $civilService->license_number = $data['license_number'];
         $civilService->license_validity_date = $data['license_validity_date'];
         $civilService->save();
+        $this->dispatch('alert', type: 'success', message: 'Civil Service Eligibility has been successfully added', title: 'Civil Service Eligibility');
 
         $this->dispatch('close-civil-service-form-modal');
         $this->reset(['career_service', 'rating', 'examination_date', 'examination_place', 'license_number', 'license_validity_date', 'civilService']);
+
+
     }
     public function showCivilService(CivilService $civilService)
     {
@@ -90,7 +94,22 @@ class CivilServiceList extends Component
     {
         $data = $this->validate();
         $this->civilService->update($data);
+        $this->dispatch('alert', type: 'success', message: 'Civil Service Eligibility has been successfully updated.', title: 'Civil Service Eligibility');
 
         $this->dispatch('close-civil-service-form-modal');
+
+    }
+
+    public function openDeleteModal(CivilService $civilService)
+    {
+        $this->civilService = $civilService;
+        $this->dispatch('open-civil-service-delete-modal');
+    }
+
+    public function deleteCivilService()
+    {
+        $this->civilService->delete();
+        $this->dispatch('close-civil-service-delete-modal');
     }
 }
+

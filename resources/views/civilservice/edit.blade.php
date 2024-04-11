@@ -3,7 +3,6 @@
         <div class="col-12 col-xl-12">
 
             <div class="card card-body border-0 shadow mb-4">
-                <h1 class="h5 mb-3" style="text-align: center"><b>Family background</b></h1>
 
                 <livewire:civil-service-list :personalInformationId="$personalinfo->id" />
 

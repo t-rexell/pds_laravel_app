@@ -1,4 +1,4 @@
-console.log("My JavaScript file (form/index.js) is being read!");
+// console.log("My JavaScript file (form/index.js) is being read!");
 
 // To display the other civil status
 document.getElementById("civil_status").addEventListener("change", function () {

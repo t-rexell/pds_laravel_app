@@ -8,7 +8,7 @@
           <div class="modal-header">
             <h5 class="modal-title">Delete Confirmation</h5>
             <span class="pull-right">
-              <img class="spinner" src="{{ asset('img/spinner.gif') }}">
+              <img class="spinner" src="">
             </span>
           </div>
           <div class="modal-body">
@@ -19,7 +19,7 @@
 						<button id="{{ $buttonId }}" class="btn btn-outline-danger"><i class="bi bi-check-lg"></i> Delete </button>
           </div>
         @endif
-{{-- 
+{{--
         @if ($type === 'view')
           <div class="modal-header">
             <h5 class="modal-title">Cancel Reason</h5>

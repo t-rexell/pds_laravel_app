@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Web\Client\FamilyBackgroundController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Web\User\UserController;
 use App\Http\Controllers\Web\Client\ClientController;
@@ -31,10 +32,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/form', function () {
         return view('personalinfo.form');
     })->name('form');
-
     Route::resource('personalinfo', PersonalInfoController::class);
-
     Route::get('personal/info/table', PersonalInfoTable::class)->name('table');
+    Route::put('personalinfo/familybackground/{personalinfo}', FamilyBackgroundController::class)->name('familybackground.update');
 });
 
 require __DIR__ . '/auth.php';

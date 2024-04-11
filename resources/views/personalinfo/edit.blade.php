@@ -9,8 +9,10 @@
             <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
                 data-bs-target="#tabs-personal-information" type="button" role="tab" aria-controls="nav-home"
                 aria-selected="true">Personal Information</button>
-            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#tabs-civil-service"
-                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Civil Service</button>
+            <button class="nav-link" id="nav-familybackground-tab" data-bs-toggle="tab" data-bs-target="#tabs-family-background"
+                type="button" role="tab" aria-controls="nav-family-background" aria-selected="false">Family Background</button>
+            <button class="nav-link" id="nav-civilservice-tab" data-bs-toggle="tab" data-bs-target="#tabs-civil-service"
+                type="button" role="tab" aria-controls="nav-civil-service" aria-selected="false">Civil Service</button>
 
         </div>
     </nav>
@@ -582,7 +584,7 @@
         </div>
     </div>
     </div>
-    {{-- @include('familybackground.create') --}}
+    @include('familybackground.edit')
 
     {{-- @include('children.create')
     @include('familybackground.create') --}}

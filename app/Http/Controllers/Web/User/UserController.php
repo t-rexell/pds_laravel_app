@@ -11,44 +11,26 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\View\View;
+use Illuminate\Http\Response;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
-
-        // // search input
-        // $searchVal = $request->search ?? null;
-        // // paginate with query
-        // $users = User::all();
-        // // $users = User::where('name', 'LIKE', '%'.$searchVal.'%')->whereNot('id', auth()->user()->id)->paginate(5)->withQueryString();
-
         return view('user.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('user.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(StoreUserRequest $request)
     {
 
-        // validated data
         $data = $request->validated();
 
-        // dd($data);
-
-        // Insert new User
         $user                                 = new User;
         $user->first_name                     = $data['first_name'];
         $user->middle_name                     = $data['middle_name'];
@@ -57,31 +39,21 @@ class UserController extends Controller
         $user->password                     = $data['password'];
         $user->save();
 
+        Alert::toast('User Successfully Added', 'success');
 
-        Alert::toast('Contact Successfully Added', '');
-        // redirection
         return redirect()->route('users.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
-        //
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(User $user)
     {
         return view('user.edit', compact('user'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(UpdateUserRequest $request, User $user)
     {
         // validated data
@@ -100,22 +72,21 @@ class UserController extends Controller
 
         $user->save();
 
-        // redirection
+        Alert::toast('User Successfully Updated', 'success');
+
         return redirect()->route('users.index');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Request $request, User $user)
     {
         if ( $request->ajax() ) {
 
 			$user->delete();
 			return response()->json([
-				'success' => true
-			]);
+				'success' => true,
+                'message' => 'User Successfully Deleted'
+            ], Response::HTTP_OK);
 
 		}
+
     }
 }

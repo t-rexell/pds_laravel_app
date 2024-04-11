@@ -53,7 +53,7 @@
     </div>
 
     {{-- modal --}}
-    <x-modal modal-id="delete-user-modal" button-id="destroy-user" type="delete" label="user" />
+    <x-modal modal-id="deletePersonalInfoModal" button-id="destroyPersonalInfo" type="delete" label="Personal Information" />
 
     @push('scripts')
     <script type="text/javascript" src="{{ asset('js/page/personalinfo/index.js') }}"></script>
